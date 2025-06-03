@@ -3,92 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AxiomFlow Global</title>
+  <title data-key="pageTitle">AxiomFlow Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      /* Smoother scrolling for anchor links */
       scroll-behavior: smooth;
     }
     h1, h2, h3 {
       font-family: 'Poppins', sans-serif;
     }
-    /* Custom darker gradient for hero background */
     .hero-gradient {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deeper dark blue/slate */
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     }
-    /* Custom button gradient - richer blue/purple */
     .btn-gradient {
-      background: linear-gradient(45deg, #4c51bf, #6b46c1); /* Richer blue to purple */
+      background: linear-gradient(45deg, #4c51bf, #6b46c1);
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(76, 81, 191, 0.3); /* Softer shadow */
+      box-shadow: 0 5px 15px rgba(76, 81, 191, 0.3);
     }
     .btn-gradient:hover {
-      background: linear-gradient(45deg, #6b46c1, #4c51bf); /* Reverse gradient on hover */
-      transform: translateY(-3px) scale(1.02); /* More pronounced lift */
-      box-shadow: 0 8px 20px rgba(107, 70, 193, 0.5); /* Stronger shadow on hover */
+      background: linear-gradient(45deg, #6b46c1, #4c51bf);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(107, 70, 193, 0.5);
     }
-    /* Custom card background for sections - subtle dark */
     .section-card {
-      background-color: #1f2937; /* Darker background for sections */
-      border-color: #374151; /* Darker border */
-      color: #e2e8f0; /* Lighter text for contrast */
+      background-color: #1f2937;
+      border-color: #374151;
+      color: #e2e8f0;
     }
-    /* Custom input field styling for darker theme */
     .form-input-dark {
-      background-color: #374151; /* Darker input background */
-      border-color: #4b5563; /* Darker input border */
-      color: #e2e8f0; /* Lighter input text */
+      background-color: #374151;
+      border-color: #4b5563;
+      color: #e2e8f0;
     }
     .form-input-dark::placeholder {
-      color: #9ca3af; /* Lighter placeholder text */
+      color: #9ca3af;
     }
     .form-input-dark:focus {
       outline: none;
-      ring-3: #6366f1; /* Brighter focus ring */
-      border-color: #6366f1; /* Brighter focus border */
+      ring-3: #6366f1;
+      border-color: #6366f1;
     }
-    /* Service card specific styles */
     .service-card {
-      background-color: #2d3748; /* Slightly lighter dark for cards */
+      background-color: #2d3748;
       border-color: #4a5568;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .service-card:hover {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transform: translateY(-5px) scale(1.01); /* More noticeable lift */
+      transform: translateY(-5px) scale(1.01);
     }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-200 antialiased">
 
+  <!-- Header Section - Modernized Hero with deeper colors -->
   <header class="hero-gradient text-white py-24 text-center rounded-b-3xl shadow-2xl overflow-hidden relative">
-    <div class="absolute inset-0 opacity-15" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Abstract+Logistics+Pattern'); background-size: cover; background-position: center; filter: blur(2px);"></div>
+    <!-- Language Switcher - Moved to top right corner -->
+    <div class="absolute top-6 right-6 z-30"> <!-- Adjusted top and right for better spacing -->
+      <select id="language-switcher" class="bg-gray-700 bg-opacity-70 text-white text-sm py-2 px-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-600">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="zh">中文 (简体)</option>
+      </select>
+    </div>
+
+    <!-- Removed the background image div -->
+    <!-- <div class="absolute inset-0 opacity-15" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Abstract+Logistics+Pattern'); background-size: cover; background-position: center; filter: blur(2px);"></div> -->
     <div class="relative z-10 px-4">
-      <h1 class="text-6xl md:text-8xl font-extrabold mb-4 leading-tight tracking-tight">AxiomFlow Global</h1>
-      <p class="text-xl md:text-3xl font-light max-w-3xl mx-auto opacity-90 mt-4">Smart Logistics. Reliable Distribution. Nationwide Coverage.</p>
+      <h1 class="text-6xl md:text-8xl font-extrabold mb-4 leading-tight tracking-tight" data-key="mainTitle">AxiomFlow Global</h1>
+      <p class="text-xl md:text-3xl font-light max-w-3xl mx-auto opacity-90 mt-4" data-key="tagline">Smart Logistics. Reliable Distribution. Nationwide Coverage.</p>
       <div class="mt-12">
-        <a href="#partner" class="btn-gradient inline-block text-white font-semibold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75">
+        <a href="#partner" class="btn-gradient inline-block text-white font-semibold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75" data-key="partnerCta">
           Partner With Us Today
         </a>
       </div>
     </div>
   </header>
 
+  <!-- Navigation Bar - Sleeker Design, darker background -->
   <nav class="bg-gray-800 py-4 text-center shadow-lg rounded-full mt-[-30px] relative z-20 mx-4 md:mx-auto max-w-5xl transition-all duration-300 hover:shadow-xl">
-    <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 px-4">
-      <a href="#about" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">About</a>
-      <a href="#services" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Our Services</a>
-      <a href="#partner" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Partner With Us</a>
-      <a href="#contact" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Contact</a>
+    <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 px-4 md:px-8">
+      <a href="#about" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700" data-key="navAbout">About</a>
+      <a href="#services" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700" data-key="navServices">Our Services</a>
+      <a href="#partner" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700" data-key="navPartner">Partner With Us</a>
+      <a href="#contact" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700" data-key="navContact">Contact</a>
     </div>
   </nav>
 
+  <!-- About Us Section - Enhanced Card Style with darker background -->
   <section id="about" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
-    <h2 class="text-4xl font-bold text-white mb-6 text-center">About Us</h2>
-    <p class="text-gray-300 leading-relaxed text-lg text-center max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center" data-key="aboutUsTitle">About Us</h2>
+    <p class="text-gray-300 leading-relaxed text-lg text-center max-w-3xl mx-auto" data-key="aboutUsText">
       AxiomFlow Global is a leading logistics and supply chain service provider based in Iraq. Since our founding in 2020,
       we’ve meticulously built a reliable network of state-of-the-art storage and distribution centers across the country.
       We specialize in the efficient handling, secure warehousing, and rapid transportation of various goods for companies
@@ -99,62 +106,63 @@
     </p>
   </section>
 
+  <!-- Our Services Section - Modern Grid with Icons (Placeholder for now) -->
   <section id="services" class="p-10 max-w-6xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
-    <h2 class="text-4xl font-bold text-white mb-8 text-center">Our Services</h2>
+    <h2 class="text-4xl font-bold text-white mb-8 text-center" data-key="ourServicesTitle">Our Services</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-        <div class="text-blue-400 text-6xl mb-4 text-center">📦</div> <h3 class="text-2xl font-semibold text-blue-300 mb-3 text-center">Warehousing & Cold Storage Solutions</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <div class="text-blue-400 text-6xl mb-4 text-center">📦</div> <h3 class="text-2xl font-semibold text-blue-300 mb-3 text-center" data-key="service1Title">Warehousing & Cold Storage Solutions</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service1Text">
           Secure and modern warehousing facilities, including specialized cold storage, to protect your goods.
           We offer flexible, scalable storage options to meet diverse business needs with optimal conditions.
         </p>
       </div>
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <div class="text-green-400 text-6xl mb-4 text-center">🚚</div>
-        <h3 class="text-2xl font-semibold text-green-300 mb-3 text-center">Nationwide Distribution & Last-Mile Delivery</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <h3 class="text-2xl font-semibold text-green-300 mb-3 text-center" data-key="service2Title">Nationwide Distribution & Last-Mile Delivery</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service2Text">
           An extensive distribution network ensuring efficient and timely delivery across all major cities and regions in Iraq,
           including crucial, reliable last-mile services directly to your customers.
         </p>
       </div>
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <div class="text-purple-400 text-6xl mb-4 text-center">✈️</div>
-        <h3 class="text-2xl font-semibold text-purple-300 mb-3 text-center">Import & Export Freight Handling</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <h3 class="text-2xl font-semibold text-purple-300 mb-3 text-center" data-key="service3Title">Import & Export Freight Handling</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service3Text">
           Comprehensive freight handling services for both import and export, ensuring smooth and compliant movement of goods
           across international borders. We manage all aspects of global shipping.
         </p>
       </div>
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <div class="text-yellow-400 text-6xl mb-4 text-center">📄</div>
-        <h3 class="text-2xl font-semibold text-yellow-300 mb-3 text-center">Customs Clearance & Documentation Support</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <h3 class="text-2xl font-semibold text-yellow-300 mb-3 text-center" data-key="service4Title">Customs Clearance & Documentation Support</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service4Text">
           Expert assistance with complex customs clearance procedures and all necessary documentation, minimizing delays
           and ensuring full compliance with local and international regulations.
         </p>
       </div>
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <div class="text-red-400 text-6xl mb-4 text-center">📊</div>
-        <h3 class="text-2xl font-semibold text-red-300 mb-3 text-center">Real-time Inventory Tracking</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <h3 class="text-2xl font-semibold text-red-300 mb-3 text-center" data-key="service5Title">Real-time Inventory Tracking</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service5Text">
           Advanced, cloud-based systems for real-time inventory tracking, providing you with complete visibility and
           granular control over your stock at every stage of the supply chain.
         </p>
       </div>
       <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
         <div class="text-indigo-400 text-6xl mb-4 text-center">🔗</div>
-        <h3 class="text-2xl font-semibold text-indigo-300 mb-3 text-center">Contract Logistics & Supply Chain Optimization</h3>
-        <p class="text-gray-400 leading-relaxed text-center">
+        <h3 class="text-2xl font-semibold text-indigo-300 mb-3 text-center" data-key="service6Title">Contract Logistics & Supply Chain Optimization</h3>
+        <p class="text-gray-400 leading-relaxed text-center" data-key="service6Text">
           Tailored contract logistics solutions and strategic supply chain optimization services designed to enhance efficiency,
-          significantly reduce operational costs, and improve overall performance for your business.
+          significantly reduce operational costs, and improve overall operational performance for your business.
         </p>
       </div>
     </div>
   </section>
 
   <section id="partner" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
-    <h2 class="text-4xl font-bold text-white mb-6 text-center">Partner With Us</h2>
-    <p class="text-gray-300 leading-relaxed text-center mb-8 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center" data-key="partnerWithUsTitle">Partner With Us</h2>
+    <p class="text-gray-300 leading-relaxed text-center mb-8 max-w-3xl mx-auto" data-key="partnerWithUsText">
       If you're a company looking to store or distribute your goods across Iraq, AxiomFlow Global is your trusted local partner.
       We offer tailored logistics solutions for importers, manufacturers, and e-commerce businesses looking for unparalleled
       reliability, seamless scalability, and exceptional speed. Contact us today to discuss bespoke partnership opportunities
@@ -162,39 +170,39 @@
     </p>
     <form id="partnerForm" class="space-y-6 max-w-xl mx-auto p-8 bg-gray-800 rounded-xl shadow-inner border border-gray-700">
       <div>
-        <label for="name" class="block text-gray-300 text-base font-semibold mb-2">Your Name</label>
+        <label for="name" class="block text-gray-300 text-base font-semibold mb-2" data-key="formNameLabel">Your Name</label>
         <input type="text" id="name" name="name" placeholder="John Doe"
-               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg" data-key="formNamePlaceholder">
       </div>
       <div>
-        <label for="email" class="block text-gray-300 text-base font-semibold mb-2">Email Address</label>
+        <label for="email" class="block text-gray-300 text-base font-semibold mb-2" data-key="formEmailLabel">Email Address</label>
         <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg" data-key="formEmailPlaceholder">
       </div>
       <div>
-        <label for="company" class="block text-gray-300 text-base font-semibold mb-2">Company Name (Optional)</label>
+        <label for="company" class="block text-gray-300 text-base font-semibold mb-2" data-key="formCompanyLabel">Company Name (Optional)</label>
         <input type="text" id="company" name="company" placeholder="Your Company Inc."
-               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg" data-key="formCompanyPlaceholder">
       </div>
       <div>
-        <label for="message" class="block text-gray-300 text-base font-semibold mb-2">Message</label>
+        <label for="message" class="block text-gray-300 text-base font-semibold mb-2" data-key="formMessageLabel">Message</label>
         <textarea id="message" name="message" rows="6" placeholder="Tell us about your logistics needs and how we can assist you..."
-                  class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg"></textarea>
+                  class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg" data-key="formMessagePlaceholder"></textarea>
       </div>
       <button type="submit"
-              class="btn-gradient w-full text-white font-bold py-4 px-6 rounded-lg text-xl focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+              class="btn-gradient w-full text-white font-bold py-4 px-6 rounded-lg text-xl focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md" data-key="submitInquiryBtn">
         Submit Inquiry
       </button>
     </form>
   </section>
 
   <section id="contact" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
-    <h2 class="text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
+    <h2 class="text-4xl font-bold text-white mb-6 text-center" data-key="contactUsTitle">Contact Us</h2>
     <div class="space-y-4 text-gray-300 text-lg text-center max-w-xl mx-auto">
-      <p><strong>Email:</strong> <a href="mailto:axiomflowiq@gmail.com" class="text-blue-400 hover:underline font-medium">axiomflowiq@gmail.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9647874838518" class="text-green-400 hover:underline font-medium" target="_blank" rel="noopener noreferrer">+964 787 483 8518</a></p>
-      <p><strong>Location:</strong> Iraq – Karbala Governorate</p>
-      <p class="text-base text-gray-500 mt-6">
+      <p data-key="contactEmail"><strong>Email:</strong> <a href="mailto:axiomflowiq@gmail.com" class="text-blue-400 hover:underline font-medium">axiomflowiq@gmail.com</a></p>
+      <p data-key="contactWhatsApp"><strong>WhatsApp:</strong> <a href="https://wa.me/9647874838518" class="text-green-400 hover:underline font-medium" target="_blank" rel="noopener noreferrer">+964 787 483 8518</a></p>
+      <p data-key="contactLocation"><strong>Location:</strong> Iraq – Karbala Governorate</p>
+      <p class="text-base text-gray-500 mt-6" data-key="contactText">
         Reach out to AxiomFlow Global for reliable logistics and supply chain solutions tailored to your business needs.
         We are ready to assist you with efficient handling, warehousing, and transportation across Iraq.
         Our team is available to answer your questions and provide expert guidance.
@@ -203,8 +211,8 @@
   </section>
 
   <footer class="bg-gray-950 text-white py-12 text-center mt-20 rounded-t-3xl shadow-2xl">
-    <p class="text-base mb-2 opacity-90">&copy; 2023 AxiomFlow Global. All rights reserved.</p>
-    <p class="text-sm opacity-70">Designed with efficiency and reliability in mind for a connected world.</p>
+    <p class="text-base mb-2 opacity-90" data-key="footerCopyright">&copy; 2023 AxiomFlow Global. All rights reserved.</p>
+    <p class="text-sm opacity-70" data-key="footerTagline">Designed with efficiency and reliability in mind for a connected world.</p>
     <div class="flex justify-center space-x-6 mt-8">
       <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300 transform hover:scale-110">
         <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.26 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.425v.053a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.963c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.26 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.425v.053a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.963"></path></svg>
@@ -221,9 +229,9 @@
   <div id="confirmationModal" class="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center hidden z-50 p-4">
     <div class="bg-gray-800 p-10 rounded-xl shadow-2xl max-w-sm mx-auto text-center relative border border-blue-600 transform scale-95 opacity-0 transition-all duration-300 ease-out" id="modalContent">
       <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold transition-transform duration-200 hover:rotate-90">&times;</button>
-      <h3 class="text-3xl font-bold text-white mb-4">Inquiry Submitted! 🎉</h3>
-      <p class="text-gray-300 mb-6 text-lg">Thank you for your inquiry. We will contact you soon.</p>
-      <button id="okButton" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg text-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+      <h3 class="text-3xl font-bold text-white mb-4" data-key="modalTitle">Inquiry Submitted! 🎉</h3>
+      <p class="text-gray-300 mb-6 text-lg" data-key="modalText">Thank you for your inquiry. We will contact you soon.</p>
+      <button id="okButton" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg text-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md" data-key="modalOkButton">
         Got It!
       </button>
     </div>
@@ -238,11 +246,199 @@
     const modalContent = document.getElementById('modalContent');
     const closeModalButton = document.getElementById('closeModal');
     const okButton = document.getElementById('okButton');
+    const languageSwitcher = document.getElementById('language-switcher');
 
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const companyInput = document.getElementById('company');
     const messageTextarea = document.getElementById('message');
+
+    // Translations dictionary
+    const translations = {
+      en: {
+        pageTitle: 'AxiomFlow Global',
+        mainTitle: 'AxiomFlow Global',
+        tagline: 'Smart Logistics. Reliable Distribution. Nationwide Coverage.',
+        partnerCta: 'Partner With Us Today',
+        navAbout: 'About',
+        navServices: 'Our Services',
+        navPartner: 'Partner With Us',
+        navContact: 'Contact',
+        aboutUsTitle: 'About Us',
+        aboutUsText: 'AxiomFlow Global is a leading logistics and supply chain service provider based in Iraq. Since our founding in 2020, we’ve meticulously built a reliable network of state-of-the-art storage and distribution centers across the country. We specialize in the efficient handling, secure warehousing, and rapid transportation of various goods for companies of all sizes, from nascent startups to established enterprises. Our unwavering mission is to streamline logistics for businesses looking to expand or operate seamlessly within Iraq, providing highly tailored, end-to-end solutions that guarantee timely, secure, and cost-effective delivery. We are committed to empowering your business with unparalleled logistical precision and a competitive edge in the Iraqi market.',
+        ourServicesTitle: 'Our Services',
+        service1Title: 'Warehousing & Cold Storage Solutions',
+        service1Text: 'Secure and modern warehousing facilities, including specialized cold storage, to protect your goods. We offer flexible, scalable storage options to meet diverse business needs with optimal conditions.',
+        service2Title: 'Nationwide Distribution & Last-Mile Delivery',
+        service2Text: 'An extensive distribution network ensuring efficient and timely delivery across all major cities and regions in Iraq, including crucial, reliable last-mile services directly to your customers.',
+        service3Title: 'Import & Export Freight Handling',
+        service3Text: 'Comprehensive freight handling services for both import and export, ensuring smooth and compliant movement of goods across international borders. We manage all aspects of global shipping.',
+        service4Title: 'Customs Clearance & Documentation Support',
+        service4Text: 'Expert assistance with complex customs clearance procedures and all necessary documentation, minimizing delays and ensuring full compliance with local and international regulations.',
+        service5Title: 'Real-time Inventory Tracking',
+        service5Text: 'Advanced, cloud-based systems for real-time inventory tracking, providing you with complete visibility and granular control over your stock at every stage of the supply chain.',
+        service6Title: 'Contract Logistics & Supply Chain Optimization',
+        service6Text: 'Tailored contract logistics solutions and strategic supply chain optimization services designed to enhance efficiency, significantly reduce operational costs, and improve overall operational performance for your business.',
+        partnerWithUsTitle: 'Partner With Us',
+        partnerWithUsText: 'If you\'re a company looking to store or distribute your goods across Iraq, AxiomFlow Global is your trusted local partner. We offer tailored logistics solutions for importers, manufacturers, and e-commerce businesses looking for unparalleled reliability, seamless scalability, and exceptional speed. Contact us today to discuss bespoke partnership opportunities and discover how we can help streamline your operations and drive your success in the Iraqi market.',
+        formNameLabel: 'Your Name',
+        formNamePlaceholder: 'John Doe',
+        formEmailLabel: 'Email Address',
+        formEmailPlaceholder: 'john.doe@example.com',
+        formCompanyLabel: 'Company Name (Optional)',
+        formCompanyPlaceholder: 'Your Company Inc.',
+        formMessageLabel: 'Message',
+        formMessagePlaceholder: 'Tell us about your logistics needs and how we can assist you...',
+        submitInquiryBtn: 'Submit Inquiry',
+        contactUsTitle: 'Contact Us',
+        contactEmail: 'Email:',
+        contactWhatsApp: 'WhatsApp:',
+        contactLocation: 'Location: Iraq – Karbala Governorate',
+        contactText: 'Reach out to AxiomFlow Global for reliable logistics and supply chain solutions tailored to your business needs. We are ready to assist you with efficient handling, warehousing, and transportation across Iraq. Our team is available to answer your questions and provide expert guidance.',
+        footerCopyright: '&copy; 2023 AxiomFlow Global. All rights reserved.',
+        footerTagline: 'Designed with efficiency and reliability in mind for a connected world.',
+        modalTitle: 'Inquiry Submitted! 🎉',
+        modalText: 'Thank you for your inquiry. We will contact you soon.',
+        modalOkButton: 'Got It!'
+      },
+      ar: {
+        pageTitle: 'أكسيوم فلو جلوبال',
+        mainTitle: 'أكسيوم فلو جلوبال',
+        tagline: 'لوجستيات ذكية. توزيع موثوق. تغطية وطنية.',
+        partnerCta: 'شراكة معنا اليوم',
+        navAbout: 'من نحن',
+        navServices: 'خدماتنا',
+        navPartner: 'كن شريكاً',
+        navContact: 'اتصل بنا',
+        aboutUsTitle: 'من نحن',
+        aboutUsText: 'أكسيوم فلو جلوبال هي شركة رائدة في تقديم خدمات اللوجستيات وسلسلة التوريد ومقرها في العراق. منذ تأسيسنا في عام 2020، قمنا ببناء شبكة موثوقة من مراكز التخزين والتوزيع الحديثة في جميع أنحاء البلاد. نحن متخصصون في المناولة الفعالة والتخزين الآمن والنقل السريع لمختلف السلع للشركات من جميع الأحجام، من الشركات الناشئة إلى الشركات الكبيرة. مهمتنا الثابتة هي تبسيط اللوجستيات للشركات التي تتطلع إلى التوسع أو العمل بسلاسة داخل العراق، من خلال توفير حلول مصممة خصيصًا وشاملة تضمن التسليم في الوقت المناسب وبأمان وفعالية من حيث التكلفة. نحن ملتزمون بتمكين عملك بدقة لوجستية لا مثيل لها وميزة تنافسية في السوق العراقي.',
+        ourServicesTitle: 'خدماتنا',
+        service1Title: 'حلول التخزين والتبريد',
+        service1Text: 'مرافق تخزين آمنة وحديثة، بما في ذلك التخزين المبرد المتخصص، لحماية بضائعك. نقدم خيارات تخزين مرنة وقابلة للتطوير لتلبية احتياجات العمل المتنوعة بأفضل الظروف.',
+        service2Title: 'التوزيع على مستوى البلاد والتسليم للميل الأخير',
+        service2Text: 'شبكة توزيع واسعة تضمن التسليم الفعال وفي الوقت المناسب عبر جميع المدن والمناطق الرئيسية في العراق، بما في ذلك خدمات الميل الأخير الحاسمة والموثوقة مباشرة لعملائك.',
+        service3Title: 'مناولة الشحن للاستيراد والتصدير',
+        service3Text: 'خدمات مناولة الشحن الشاملة للاستيراد والتصدير، مما يضمن حركة سلسة ومتوافقة للبضائع عبر الحدود الدولية. نحن ندير جميع جوانب الشحن العالمي.',
+        service4Title: 'التخليص الجمركي ودعم الوثائق',
+        service4Text: 'مساعدة الخبراء في إجراءات التخليص الجمركي المعقدة وجميع الوثائق اللازمة، مما يقلل التأخير ويضمن الامتثال الكامل للوائح المحلية والدولية.',
+        service5Title: 'تتبع المخزون في الوقت الفعلي',
+        service5Text: 'أنظمة متقدمة تعتمد على السحابة لتتبع المخزون في الوقت الفعلي، مما يوفر لك رؤية كاملة وتحكمًا دقيقًا في مخزونك في كل مرحلة من مراحل سلسلة التوريد.',
+        service6Title: 'اللوجستيات التعاقدية وتحسين سلسلة التوريد',
+        service6Text: 'حلول لوجستية تعاقدية مصممة خصيصًا وخدمات تحسين سلسلة التوريد الاستراتيجية المصممة لتعزيز الكفاءة، وتقليل التكاليف التشغيلية بشكل كبير، وتحسين الأداء التشغيلي العام لعملك.',
+        partnerWithUsTitle: 'كن شريكاً معنا',
+        partnerWithUsText: 'إذا كنت شركة تتطلع إلى تخزين أو توزيع بضائعك في جميع أنحاء العراق، فإن أكسيوم فلو جلوبال هي شريكك المحلي الموثوق به. نحن نقدم حلولًا لوجستية مخصصة للمستوردين والمصنعين وشركات التجارة الإلكترونية التي تبحث عن موثوقية لا مثيل لها، وقابلية للتوسع سلسة، وسرعة استثنائية. اتصل بنا اليوم لمناقشة فرص الشراكة المخصصة واكتشاف كيف يمكننا المساعدة في تبسيط عملياتك ودفع نجاحك في السوق العراقي.',
+        formNameLabel: 'اسمك',
+        formNamePlaceholder: 'جون دو',
+        formEmailLabel: 'عنوان البريد الإلكتروني',
+        formEmailPlaceholder: 'john.doe@example.com',
+        formCompanyLabel: 'اسم الشركة (اختياري)',
+        formCompanyPlaceholder: 'شركتك',
+        formMessageLabel: 'الرسالة',
+        formMessagePlaceholder: 'أخبرنا عن احتياجاتك اللوجستية وكيف يمكننا مساعدتك...',
+        submitInquiryBtn: 'إرسال الاستفسار',
+        contactUsTitle: 'اتصل بنا',
+        contactEmail: 'البريد الإلكتروني:',
+        contactWhatsApp: 'واتساب:',
+        contactLocation: 'الموقع: العراق – محافظة كربلاء',
+        contactText: 'تواصل مع أكسيوم فلو جلوبال للحصول على حلول لوجستية وسلسلة توريد موثوقة مصممة خصيصًا لاحتياجات عملك. نحن على استعداد لمساعدتك في المناولة الفعالة والتخزين والنقل في جميع أنحاء العراق. فريقنا متاح للإجابة على أسئلتك وتقديم إرشادات الخبراء.',
+        footerCopyright: '&copy; 2023 أكسيوم فلو جلوبال. جميع الحقوق محفوظة.',
+        footerTagline: 'مصممة بكفاءة وموثوقية في الاعتبار لعالم متصل.',
+        modalTitle: 'تم إرسال الاستفسار! 🎉',
+        modalText: 'شكرا لاستفسارك. سوف نتصل بك قريبا.',
+        modalOkButton: 'حسناً!'
+      },
+      zh: {
+        pageTitle: 'AxiomFlow 全球物流',
+        mainTitle: 'AxiomFlow 全球物流',
+        tagline: '智能物流。可靠配送。全国覆盖。',
+        partnerCta: '立即与我们合作',
+        navAbout: '关于我们',
+        navServices: '我们的服务',
+        navPartner: '与我们合作',
+        navContact: '联系我们',
+        aboutUsTitle: '关于我们',
+        aboutUsText: 'AxiomFlow 全球物流是伊拉克领先的物流和供应链服务提供商。自2020年成立以来，我们精心建立了覆盖全国的可靠仓储和配送中心网络。我们专注于为各种规模的公司（从新兴初创企业到成熟企业）提供高效处理、安全仓储和快速运输各类货物。我们的坚定使命是为希望在伊拉克境内扩展或无缝运营的企业简化物流，提供高度定制的端到端解决方案，确保及时、安全和成本效益高的交付。我们致力于通过无与伦比的物流精度和在伊拉克市场的竞争优势来赋能您的业务。',
+        ourServicesTitle: '我们的服务',
+        service1Title: '仓储与冷链解决方案',
+        service1Text: '安全现代化的仓储设施，包括专业冷链存储，以保护您的货物。我们提供灵活、可扩展的存储选项，以最佳条件满足多样化的业务需求。',
+        service2Title: '全国配送与最后一公里交付',
+        service2Text: '广泛的配送网络，确保在伊拉克所有主要城市和地区高效及时交付，包括直接送达客户的关键、可靠的最后一公里服务。',
+        service3Title: '进出口货运处理',
+        service3Text: '全面的进出口货运处理服务，确保货物跨境顺畅合规。我们管理全球运输的所有方面。',
+        service4Title: '清关与文件支持',
+        service4Text: '专家协助处理复杂的清关程序和所有必要文件，最大限度地减少延误，并确保完全符合当地和国际法规。',
+        service5Title: '实时库存追踪',
+        service5Text: '先进的云端系统，用于实时库存追踪，为您提供供应链每个阶段的完整可见性和精细控制。',
+        service6Title: '合同物流与供应链优化',
+        service6Text: '量身定制的合同物流解决方案和战略供应链优化服务，旨在提高效率，显著降低运营成本，并提高您业务的整体运营绩效。',
+        partnerWithUsTitle: '与我们合作',
+        partnerWithUsText: '如果您是希望在伊拉克存储或分销货物的公司，AxiomFlow 全球物流是您值得信赖的本地合作伙伴。我们为寻求无与伦比的可靠性、无缝可扩展性和卓越速度的进口商、制造商和电子商务企业提供定制的物流解决方案。立即联系我们，讨论定制的合作机会，了解我们如何帮助您简化运营并推动您在伊拉克市场的成功。',
+        formNameLabel: '您的姓名',
+        formNamePlaceholder: '张三',
+        formEmailLabel: '电子邮件地址',
+        formEmailPlaceholder: 'zhangsan@example.com',
+        formCompanyLabel: '公司名称（可选）',
+        formCompanyPlaceholder: '您的公司',
+        formMessageLabel: '留言',
+        formMessagePlaceholder: '请告诉我们您的物流需求以及我们如何为您提供帮助...',
+        submitInquiryBtn: '提交咨询',
+        contactUsTitle: '联系我们',
+        contactEmail: '电子邮件：',
+        contactWhatsApp: 'WhatsApp：',
+        contactLocation: '地点：伊拉克 – 卡尔巴拉省',
+        contactText: '请联系 AxiomFlow 全球物流，获取根据您的业务需求量身定制的可靠物流和供应链解决方案。我们随时准备协助您在伊拉克进行高效处理、仓储和运输。我们的团队随时为您解答疑问并提供专家指导。',
+        footerCopyright: '&copy; 2023 AxiomFlow 全球物流。保留所有权利。',
+        footerTagline: '设计旨在提高效率和可靠性，连接世界。',
+        modalTitle: '咨询已提交！🎉',
+        modalText: '感谢您的咨询。我们将很快与您联系。',
+        modalOkButton: '好的！'
+      }
+    };
+
+    let currentLanguage = 'en'; // Default language
+
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      document.documentElement.lang = lang; // Set HTML lang attribute
+
+      // Set text direction based on language
+      document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
+      document.body.style.textAlign = (lang === 'ar') ? 'right' : 'left';
+
+      // Update all elements with data-key
+      document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translations[lang][key];
+          } else if (key === 'footerCopyright') {
+            // Special handling for copyright to preserve &copy;
+            element.innerHTML = translations[lang][key];
+          } else if (key === 'contactEmail' || key === 'contactWhatsApp') {
+            // For email/whatsapp, only update the text content, preserve the link
+            const strongTag = element.querySelector('strong');
+            if (strongTag) {
+                strongTag.textContent = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+          }
+          else {
+            element.textContent = translations[lang][key];
+          }
+        }
+      });
+
+      // Update specific elements that need special handling or are not covered by data-key
+      document.title = translations[lang]['pageTitle'];
+      document.querySelector('h1[data-key="mainTitle"]').textContent = translations[lang]['mainTitle'];
+      document.querySelector('p[data-key="tagline"]').textContent = translations[lang]['tagline'];
+      document.querySelector('a[data-key="partnerCta"]').textContent = translations[lang]['partnerCta'];
+      document.querySelector('button[data-key="submitInquiryBtn"]').textContent = translations[lang]['submitInquiryBtn'];
+      document.querySelector('h3[data-key="modalTitle"]').textContent = translations[lang]['modalTitle'];
+      document.querySelector('p[data-key="modalText"]').textContent = translations[lang]['modalText'];
+      document.querySelector('button[data-key="modalOkButton"]').textContent = translations[lang]['modalOkButton'];
+    }
 
     function showModal() {
       confirmationModal.classList.remove('hidden');
@@ -296,15 +492,12 @@
         companyInput.value = '';
         messageTextarea.value = '';
       } catch (err) {
-        // Changed alert to console.error as per instructions
         console.error('❌ Failed to send your message. Please try again.', err);
-        // You might want to show a custom message box here instead of alert in a real app
-        // For this demo, we'll just log to console.
         const errorMessage = document.createElement('div');
         errorMessage.textContent = '❌ Failed to send your message. Please try again.';
         errorMessage.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white p-3 rounded-lg shadow-lg z-50';
         document.body.appendChild(errorMessage);
-        setTimeout(() => errorMessage.remove(), 3000); // Remove after 3 seconds
+        setTimeout(() => errorMessage.remove(), 3000);
       }
     });
 
@@ -312,6 +505,19 @@
     okButton.addEventListener('click', hideModal);
     confirmationModal.addEventListener('click', function (event) {
       if (event.target === confirmationModal) hideModal();
+    });
+
+    // Event listener for language switcher
+    languageSwitcher.addEventListener('change', (event) => {
+      setLanguage(event.target.value);
+    });
+
+    // Set initial language on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check for a saved language preference, otherwise default to English
+      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+      languageSwitcher.value = savedLang; // Set the dropdown to the saved language
+      setLanguage(savedLang);
     });
   </script>
 
