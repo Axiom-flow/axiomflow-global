@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AxiomFlow Global</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Smoother scrolling for anchor links */
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom darker gradient for hero background */
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deeper dark blue/slate */
+    }
+    /* Custom button gradient - richer blue/purple */
+    .btn-gradient {
+      background: linear-gradient(45deg, #4c51bf, #6b46c1); /* Richer blue to purple */
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(76, 81, 191, 0.3); /* Softer shadow */
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(45deg, #6b46c1, #4c51bf); /* Reverse gradient on hover */
+      transform: translateY(-3px) scale(1.02); /* More pronounced lift */
+      box-shadow: 0 8px 20px rgba(107, 70, 193, 0.5); /* Stronger shadow on hover */
+    }
+    /* Custom card background for sections - subtle dark */
+    .section-card {
+      background-color: #1f2937; /* Darker background for sections */
+      border-color: #374151; /* Darker border */
+      color: #e2e8f0; /* Lighter text for contrast */
+    }
+    /* Custom input field styling for darker theme */
+    .form-input-dark {
+      background-color: #374151; /* Darker input background */
+      border-color: #4b5563; /* Darker input border */
+      color: #e2e8f0; /* Lighter input text */
+    }
+    .form-input-dark::placeholder {
+      color: #9ca3af; /* Lighter placeholder text */
+    }
+    .form-input-dark:focus {
+      outline: none;
+      ring-3: #6366f1; /* Brighter focus ring */
+      border-color: #6366f1; /* Brighter focus border */
+    }
+    /* Service card specific styles */
+    .service-card {
+      background-color: #2d3748; /* Slightly lighter dark for cards */
+      border-color: #4a5568;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px) scale(1.01); /* More noticeable lift */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+  <header class="hero-gradient text-white py-24 text-center rounded-b-3xl shadow-2xl overflow-hidden relative">
+    <div class="absolute inset-0 opacity-15" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Abstract+Logistics+Pattern'); background-size: cover; background-position: center; filter: blur(2px);"></div>
+    <div class="relative z-10 px-4">
+      <h1 class="text-6xl md:text-8xl font-extrabold mb-4 leading-tight tracking-tight">AxiomFlow Global</h1>
+      <p class="text-xl md:text-3xl font-light max-w-3xl mx-auto opacity-90 mt-4">Smart Logistics. Reliable Distribution. Nationwide Coverage.</p>
+      <div class="mt-12">
+        <a href="#partner" class="btn-gradient inline-block text-white font-semibold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75">
+          Partner With Us Today
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-gray-800 py-4 text-center shadow-lg rounded-full mt-[-30px] relative z-20 mx-4 md:mx-auto max-w-5xl transition-all duration-300 hover:shadow-xl">
+    <div class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8 px-4">
+      <a href="#about" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">About</a>
+      <a href="#services" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Our Services</a>
+      <a href="#partner" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Partner With Us</a>
+      <a href="#contact" class="text-gray-200 hover:text-blue-400 font-semibold text-lg transition duration-300 ease-in-out px-4 py-2 rounded-full hover:bg-gray-700">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center">About Us</h2>
+    <p class="text-gray-300 leading-relaxed text-lg text-center max-w-3xl mx-auto">
+      AxiomFlow Global is a leading logistics and supply chain service provider based in Iraq. Since our founding in 2020,
+      we’ve meticulously built a reliable network of state-of-the-art storage and distribution centers across the country.
+      We specialize in the efficient handling, secure warehousing, and rapid transportation of various goods for companies
+      of all sizes, from nascent startups to established enterprises. Our unwavering mission is to streamline logistics
+      for businesses looking to expand or operate seamlessly within Iraq, providing highly tailored, end-to-end solutions
+      that guarantee timely, secure, and cost-effective delivery. We are committed to empowering your business with
+      unparalleled logistical precision and a competitive edge in the Iraqi market.
+    </p>
+  </section>
+
+  <section id="services" class="p-10 max-w-6xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
+    <h2 class="text-4xl font-bold text-white mb-8 text-center">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-blue-400 text-6xl mb-4 text-center">📦</div> <h3 class="text-2xl font-semibold text-blue-300 mb-3 text-center">Warehousing & Cold Storage Solutions</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          Secure and modern warehousing facilities, including specialized cold storage, to protect your goods.
+          We offer flexible, scalable storage options to meet diverse business needs with optimal conditions.
+        </p>
+      </div>
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-green-400 text-6xl mb-4 text-center">🚚</div>
+        <h3 class="text-2xl font-semibold text-green-300 mb-3 text-center">Nationwide Distribution & Last-Mile Delivery</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          An extensive distribution network ensuring efficient and timely delivery across all major cities and regions in Iraq,
+          including crucial, reliable last-mile services directly to your customers.
+        </p>
+      </div>
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-purple-400 text-6xl mb-4 text-center">✈️</div>
+        <h3 class="text-2xl font-semibold text-purple-300 mb-3 text-center">Import & Export Freight Handling</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          Comprehensive freight handling services for both import and export, ensuring smooth and compliant movement of goods
+          across international borders. We manage all aspects of global shipping.
+        </p>
+      </div>
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-yellow-400 text-6xl mb-4 text-center">📄</div>
+        <h3 class="text-2xl font-semibold text-yellow-300 mb-3 text-center">Customs Clearance & Documentation Support</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          Expert assistance with complex customs clearance procedures and all necessary documentation, minimizing delays
+          and ensuring full compliance with local and international regulations.
+        </p>
+      </div>
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-red-400 text-6xl mb-4 text-center">📊</div>
+        <h3 class="text-2xl font-semibold text-red-300 mb-3 text-center">Real-time Inventory Tracking</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          Advanced, cloud-based systems for real-time inventory tracking, providing you with complete visibility and
+          granular control over your stock at every stage of the supply chain.
+        </p>
+      </div>
+      <div class="service-card p-8 rounded-xl shadow-md border hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+        <div class="text-indigo-400 text-6xl mb-4 text-center">🔗</div>
+        <h3 class="text-2xl font-semibold text-indigo-300 mb-3 text-center">Contract Logistics & Supply Chain Optimization</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+          Tailored contract logistics solutions and strategic supply chain optimization services designed to enhance efficiency,
+          significantly reduce operational costs, and improve overall performance for your business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="partner" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center">Partner With Us</h2>
+    <p class="text-gray-300 leading-relaxed text-center mb-8 max-w-3xl mx-auto">
+      If you're a company looking to store or distribute your goods across Iraq, AxiomFlow Global is your trusted local partner.
+      We offer tailored logistics solutions for importers, manufacturers, and e-commerce businesses looking for unparalleled
+      reliability, seamless scalability, and exceptional speed. Contact us today to discuss bespoke partnership opportunities
+      and discover how we can help streamline your operations and drive your success in the Iraqi market.
+    </p>
+    <form id="partnerForm" class="space-y-6 max-w-xl mx-auto p-8 bg-gray-800 rounded-xl shadow-inner border border-gray-700">
+      <div>
+        <label for="name" class="block text-gray-300 text-base font-semibold mb-2">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe"
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+      </div>
+      <div>
+        <label for="email" class="block text-gray-300 text-base font-semibold mb-2">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+      </div>
+      <div>
+        <label for="company" class="block text-gray-300 text-base font-semibold mb-2">Company Name (Optional)</label>
+        <input type="text" id="company" name="company" placeholder="Your Company Inc."
+               class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg">
+      </div>
+      <div>
+        <label for="message" class="block text-gray-300 text-base font-semibold mb-2">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell us about your logistics needs and how we can assist you..."
+                  class="form-input-dark w-full py-3 px-5 border rounded-lg focus:ring-3 focus:ring-blue-500 transition duration-300 text-lg"></textarea>
+      </div>
+      <button type="submit"
+              class="btn-gradient w-full text-white font-bold py-4 px-6 rounded-lg text-xl focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+        Submit Inquiry
+      </button>
+    </form>
+  </section>
+
+  <section id="contact" class="p-10 max-w-5xl mx-auto section-card mt-16 rounded-2xl shadow-xl border">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
+    <div class="space-y-4 text-gray-300 text-lg text-center max-w-xl mx-auto">
+      <p><strong>Email:</strong> <a href="mailto:axiomflowiq@gmail.com" class="text-blue-400 hover:underline font-medium">axiomflowiq@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9647874838518" class="text-green-400 hover:underline font-medium" target="_blank" rel="noopener noreferrer">+964 787 483 8518</a></p>
+      <p><strong>Location:</strong> Iraq – Karbala Governorate</p>
+      <p class="text-base text-gray-500 mt-6">
+        Reach out to AxiomFlow Global for reliable logistics and supply chain solutions tailored to your business needs.
+        We are ready to assist you with efficient handling, warehousing, and transportation across Iraq.
+        Our team is available to answer your questions and provide expert guidance.
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-gray-950 text-white py-12 text-center mt-20 rounded-t-3xl shadow-2xl">
+    <p class="text-base mb-2 opacity-90">&copy; 2023 AxiomFlow Global. All rights reserved.</p>
+    <p class="text-sm opacity-70">Designed with efficiency and reliability in mind for a connected world.</p>
+    <div class="flex justify-center space-x-6 mt-8">
+      <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300 transform hover:scale-110">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.26 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.425v.053a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.963c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.41-4.26 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.425v.053a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 1.963"></path></svg>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300 transform hover:scale-110">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.164-1.11-1.474-1.11-1.474-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.099 2.65.64.7 1.028 1.592 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" /></svg>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-blue-400 transition duration-300 transform hover:scale-110">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.338 16.788l3.155 3.136a.75.75 0 001.06-1.06l-3.155-3.136a8.25 8.25 0 10-1.06 1.06zM11.5 18a6.5 6.5 0 110-13 6.5 6.5 0 010 13z" /></svg>
+      </a>
+    </div>
+  </footer>
+
+  <div id="confirmationModal" class="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center hidden z-50 p-4">
+    <div class="bg-gray-800 p-10 rounded-xl shadow-2xl max-w-sm mx-auto text-center relative border border-blue-600 transform scale-95 opacity-0 transition-all duration-300 ease-out" id="modalContent">
+      <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold transition-transform duration-200 hover:rotate-90">&times;</button>
+      <h3 class="text-3xl font-bold text-white mb-4">Inquiry Submitted! 🎉</h3>
+      <p class="text-gray-300 mb-6 text-lg">Thank you for your inquiry. We will contact you soon.</p>
+      <button id="okButton" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg text-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+        Got It!
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const TELEGRAM_TOKEN = '8170310218:AAHOPLrWqaeaw1M254QRp3cU6b-jD6fJnS4';
+    const TELEGRAM_CHAT_ID = '@axiomflow'; // Public channel username
+
+    const partnerForm = document.getElementById('partnerForm');
+    const confirmationModal = document.getElementById('confirmationModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModalButton = document.getElementById('closeModal');
+    const okButton = document.getElementById('okButton');
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const companyInput = document.getElementById('company');
+    const messageTextarea = document.getElementById('message');
+
+    function showModal() {
+      confirmationModal.classList.remove('hidden');
+      confirmationModal.classList.add('flex');
+      setTimeout(() => {
+        modalContent.classList.remove('opacity-0', 'scale-95');
+        modalContent.classList.add('opacity-100', 'scale-100');
+      }, 10);
+    }
+
+    function hideModal() {
+      modalContent.classList.remove('opacity-100', 'scale-100');
+      modalContent.classList.add('opacity-0', 'scale-95');
+      setTimeout(() => {
+        confirmationModal.classList.add('hidden');
+        confirmationModal.classList.remove('flex');
+      }, 300);
+    }
+
+    partnerForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const company = companyInput.value.trim();
+      const message = messageTextarea.value.trim();
+
+      const textMessage =
+        `📦 *New Partner Inquiry*:\n\n\n` +
+        `👤 *Name:* ${name}\n\n` +
+        `📧 *Email:* ${email}\n\n` +
+        `🏢 *Company:* ${company || 'N/A'}\n\n` +
+        `📝 *Message: *${message}`;
+
+      try {
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: textMessage,
+            parse_mode: "Markdown"
+          })
+        });
+
+        showModal();
+        nameInput.value = '';
+        emailInput.value = '';
+        companyInput.value = '';
+        messageTextarea.value = '';
+      } catch (err) {
+        // Changed alert to console.error as per instructions
+        console.error('❌ Failed to send your message. Please try again.', err);
+        // You might want to show a custom message box here instead of alert in a real app
+        // For this demo, we'll just log to console.
+        const errorMessage = document.createElement('div');
+        errorMessage.textContent = '❌ Failed to send your message. Please try again.';
+        errorMessage.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-600 text-white p-3 rounded-lg shadow-lg z-50';
+        document.body.appendChild(errorMessage);
+        setTimeout(() => errorMessage.remove(), 3000); // Remove after 3 seconds
+      }
+    });
+
+    closeModalButton.addEventListener('click', hideModal);
+    okButton.addEventListener('click', hideModal);
+    confirmationModal.addEventListener('click', function (event) {
+      if (event.target === confirmationModal) hideModal();
+    });
+  </script>
+
+</body>
+</html>
